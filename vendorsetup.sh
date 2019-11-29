@@ -1,4 +1,4 @@
-for rom in lineage havoc bootleg dot
+for rom in aosip
 do
   for variant in user userdebug eng
   do

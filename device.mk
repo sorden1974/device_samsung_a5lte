@@ -35,6 +35,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchscreen.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
 
+# Add APN(s)
+PRODUCT_COPY_FILES += device/samsung/a5lte/configs/apns-conf.xml:system/etc/apns-conf.xml
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -245,7 +248,8 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.a5
+    vendor.lineage.livedisplay@2.0-service-legacymm \
+    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Media
 PRODUCT_PACKAGES += \
@@ -301,17 +305,17 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
 
 # Radio
-#PRODUCT_PACKAGES += \
-#    libcnefeatureconfig \
-#    librmnetctl \
-#    libxml2
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    librmnetctl \
+    libxml2
 
 # Manual SIM Provision
-#PRODUCT_PACKAGES += \
-#    qti-telephony-common
+PRODUCT_PACKAGES += \
+    qti-telephony-common
 
-#PRODUCT_BOOT_JARS += \
-#    telephony-ext
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -363,10 +367,6 @@ PRODUCT_PACKAGES += \
 # Touch issue workaround
 PRODUCT_PACKAGES += \
     InputDisabler
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.a5
 
 # KeyStore
 PRODUCT_PACKAGES += \

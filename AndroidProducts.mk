@@ -15,7 +15,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_a5lte.mk \
-    $(LOCAL_DIR)/havoc_a5lte.mk \
-    $(LOCAL_DIR)/dot_a5lte.mk \
-    $(LOCAL_DIR)/bootleg_a5lte.mk
+    $(LOCAL_DIR)/aosip_a5lte.mk
