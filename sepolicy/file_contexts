@@ -1,10 +1,10 @@
 # Battery
 /sys/devices/battery\.85/power_supply/battery(/.*)?						u:object_r:sysfs_batteryinfo:s0
-sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:object_r:sysfs_batteryinfo:s0
+/sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:object_r:sysfs_batteryinfo:s0
 
 # Shell files
-/system/vendor/bin/init\.qcom\.post_boot\.sh							u:object_r:qti_init_shell_exec:s0
-/system/vendor/bin/init\.qcom\.early_boot\.sh							u:object_r:qti_init_shell_exec:s0
+/(vendor|system/vendor)/bin/init\.qcom\.post_boot\.sh							u:object_r:qti_init_shell_exec:s0
+/(vendor|system/vendor)/bin/init\.qcom\.early_boot\.sh							u:object_r:qti_init_shell_exec:s0
 
 # Graphics
 /sys/devices/virtual/lcd/panel(/.*)?								u:object_r:sysfs_graphics:s0
