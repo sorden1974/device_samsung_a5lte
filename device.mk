@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
     libcamera_shim \
     libmm-qcamera \
     camera.msm8916 \
-    Snap
+    Camera2
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -131,17 +131,9 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
 
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # Dirac
 PRODUCT_PACKAGES += \
     Dirac
-
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
 
 # Display
 PRODUCT_PACKAGES += \
@@ -251,7 +243,8 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom
+    vendor.lineage.livedisplay@2.0-service-legacymm \
+    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -345,10 +338,6 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
