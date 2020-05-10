@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Dirac
 
+# JamesDSP
+PRODUCT_PACKAGES += \
+    JamesDSPManager
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8916 \
