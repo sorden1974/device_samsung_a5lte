@@ -189,8 +189,8 @@ PRODUCT_PACKAGES += \
     gps.msm8916 \
     libshims_get_process_name \
     libshims_flp \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0-service
+    android.hardware.gnss@1.0-impl.legacy \
+    android.hardware.gnss@1.0-service.legacy
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/flp.conf \
@@ -211,8 +211,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
-    init.boot_boost.sh \
-    init.move_time_data.sh
+    init.boot_boost.sh
 
 # Lights
 PRODUCT_PACKAGES += \
