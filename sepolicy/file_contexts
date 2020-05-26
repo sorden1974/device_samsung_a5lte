@@ -5,6 +5,10 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 # Shell files
 /(vendor|system/vendor)/bin/init\.qcom\.mem\.sh							u:object_r:qti_init_shell_exec:s0
 
+# TimeKeep
+/sys/devices/soc\.0/qpnp-rtc-8/rtc/rtc0(/.*)?							u:object_r:sysfs_rtc:s0
+/(system/vendor|vendor)/bin/timekeep								u:object_r:timekeep_exec:s0
+
 # Graphics
 /sys/devices/virtual/lcd/panel(/.*)?								u:object_r:sysfs_graphics:s0
 
