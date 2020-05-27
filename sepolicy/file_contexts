@@ -29,6 +29,7 @@
 /dev/sec-nfc											u:object_r:nfc_device:s0
 /dev/i2c-1											u:object_r:audio_device:s0
 /dev/alarm											u:object_r:alarm_device:s0
+/dev/stune(/.*)?									u:object_r:cgroup:s0
 
 # Camera
 /sys/devices/virtual/camera(/.*)?								u:object_r:sysfs_camera:s0
@@ -47,7 +48,7 @@
 
 # Root directories
 #/firmware(/.*)?										u:object_r:firmware_file:s0
-/firmware-modem(/.*)?										u:object_r:firmware-modem_file:s0
+/firmware-modem(/.*)?										u:object_r:firmware_file:s0
 #/persist(/.*)?											u:object_r:persist_file:s0
 /misc(/.*)?											u:object_r:misc_file:s0
 /tombstones											u:object_r:rootfs:s0
