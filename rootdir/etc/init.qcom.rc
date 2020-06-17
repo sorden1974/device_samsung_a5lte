@@ -100,7 +100,7 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
 
     write /sys/kernel/boot_adsp/boot 1
-	
+    
     exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
 
 on boot
@@ -364,8 +364,8 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
 
-on property:sys.boot_completed=1
-    restart qcamerasvr
+on property:init.svc.qcamerasvr=running
+    restart media
 
     # Enable Touch Devices
     write /sys/class/touch_key/control manual
@@ -456,3 +456,5 @@ service move_time_data /system/vendor/bin/init.move_time_data.sh
     group system
     disabled
     oneshot
+
+    restart qcamerasvr
