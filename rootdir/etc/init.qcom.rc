@@ -25,6 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+import /vendor/etc/init/hw/init.qcom.power.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
 
@@ -445,5 +446,10 @@ service move_time_data /system/vendor/bin/init.move_time_data.sh
     disabled
     oneshot
 
+service qcom-mem /system/vendor/bin/init.qcom.mem.sh
+    disabled
+    oneshot
+
 on property:sys.boot_completed=1
     restart qcamerasvr
+    start qcom-mem
