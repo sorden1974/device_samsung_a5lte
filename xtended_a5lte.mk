@@ -16,7 +16,7 @@
 $(call inherit-product, device/samsung/a5lte/full_a5lte.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Inherit System Prop for a5lte 
 $(call inherit-product, device/samsung/a5lte/system_prop.mk)
@@ -39,3 +39,6 @@ TARGET_OTA_ASSERT_DEVICE := a5ulte,a5ultexx,a5lte,a5ltexx,a53gxx,a53g,a5ltedd,a5
 
 # Fingerprint
 BUILD_FINGERPRINT := samsung/a5ltexx/a5lte:6.0.1/MMB29M/A500FXXU1CPH2:user/release-keys
+
+# Maintainer
+XTENDED_MAINTAINER := srkndenis

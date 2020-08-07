@@ -15,9 +15,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_a5lte.mk
+    $(LOCAL_DIR)/xtended_a5lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_a5lte-user \
-    bliss_a5lte-userdebug \
-    bliss_a5lte-eng
+    xtended_a5lte-user \
+    xtended_a5lte-userdebug \
+    xtended_a5lte-eng
