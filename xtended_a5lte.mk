@@ -24,7 +24,7 @@ $(call inherit-product, device/samsung/a5lte/system_prop.mk)
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := bliss_a5lte
+PRODUCT_NAME := xtended_a5lte
 BOARD_VENDOR := samsung
 PRODUCT_DEVICE := a5lte
 
