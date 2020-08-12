@@ -9,7 +9,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libtinyalsa
 
 LOCAL_C_INCLUDES := \
-	$(call project-path-for,qcom-audio)/hal/ \
+	hardware/qcom-caf/msm8916/audio/hal/ \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
 	external/tinyalsa/include \
 	external/tinycompress/include \

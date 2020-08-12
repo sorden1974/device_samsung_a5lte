@@ -20,12 +20,9 @@ $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS := \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -100,11 +97,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/acdb/Speaker_cal.acdb:$(TARGET_COPY_OUT_SYSTEM)/etc/Speaker_cal.acdb \
     $(LOCAL_PATH)/configs/audio/Tfa9895.cnt:$(TARGET_COPY_OUT_SYSTEM)/etc/Tfa9895.cnt
 
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor
@@ -123,8 +115,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl-legacy \
-    camera.device@1.0-impl-legacy \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@1.0-impl \
     libcamera_shim \
     libmm-qcamera \
     camera.msm8916 \
@@ -139,17 +131,9 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
 
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # Dirac
 PRODUCT_PACKAGES += \
     Dirac
-
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
 
 # Display
 PRODUCT_PACKAGES += \
@@ -256,7 +240,8 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom
+    vendor.lineage.livedisplay@2.0-service-legacymm \
+    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -350,10 +335,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.a5
@@ -370,10 +351,6 @@ PRODUCT_PACKAGES += \
 # Touch issue workaround
 PRODUCT_PACKAGES += \
     InputDisabler
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.a5
 
 # TimeKeep
 PRODUCT_PACKAGES += \

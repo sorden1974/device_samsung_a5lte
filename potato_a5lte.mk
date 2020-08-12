@@ -15,16 +15,25 @@
 
 $(call inherit-product, device/samsung/a5lte/full_a5lte.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
-
 # Inherit System Prop for a5lte 
 $(call inherit-product, device/samsung/a5lte/system_prop.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := bliss_a5lte
+# Inherit some common Potato stuff.
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := msm8916
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := msm8916
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+
+# Boot animation
+TARGET_BOOTANIM_LOW_RES := true
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
+
+PRODUCT_NAME := potato_a5lte
 BOARD_VENDOR := samsung
 PRODUCT_DEVICE := a5lte
 
