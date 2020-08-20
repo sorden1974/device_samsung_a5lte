@@ -95,11 +95,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/acdb/Speaker_cal.acdb:$(TARGET_COPY_OUT_SYSTEM)/etc/Speaker_cal.acdb \
     $(LOCAL_PATH)/configs/audio/Tfa9895.cnt:$(TARGET_COPY_OUT_SYSTEM)/etc/Tfa9895.cnt
 
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor
@@ -123,7 +118,7 @@ PRODUCT_PACKAGES += \
     libcamera_shim \
     libmm-qcamera \
     camera.msm8916 \
-    Camera2
+    Snap
 
 # Camera
 PRODUCT_COPY_FILES += \

@@ -15,9 +15,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bootleg_a5lte.mk
+    $(LOCAL_DIR)/aosp_a5lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    bootleg_a5lte-user \
-    bootleg_a5lte-userdebug \
-    bootleg_a5lte-eng
+    aosp_a5lte-user \
+    aosp_a5lte-userdebug \
+    aosp_a5lte-eng

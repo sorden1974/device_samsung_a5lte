@@ -15,16 +15,26 @@
 
 $(call inherit-product, device/samsung/a5lte/full_a5lte.mk)
 
-# Inherit some common BottleggersROM stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
-
 # Inherit System Prop for a5lte 
 $(call inherit-product, device/samsung/a5lte/system_prop.mk)
+
+# Inherit some common PixelExperience stuff.
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := msm8916
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := msm8916
+TARGET_BOOT_ANIMATION_RES := 720
+
+#TARGET_GAPPS_ARCH := arm
+TARGET_INCLUDE_WIFI_EXT := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := bootleg_a5lte
+PRODUCT_NAME := aosp_a5lte
 BOARD_VENDOR := samsung
 PRODUCT_DEVICE := a5lte
 
