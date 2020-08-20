@@ -13,7 +13,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.fluencetype=fluence \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
-    persist.vendor.audio.fluence.speaker=false
+    persist.vendor.audio.fluence.speaker=false \
+    persist.vendor.audio.fluence.mode=endfire
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -139,7 +140,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnGsmDevice=1 \
     ro.ril.telephony.mqanelements=6 \
     ro.telephony.call_ring.multiple=0 \
-    ro.telephony.ril.config=simactivation
+    ro.telephony.ril.config=simactivation \
+    ro.multisim.audio_follow_default_sim=false
 
 # NITZ
 PRODUCT_PROPERTY_OVERRIDES += \
