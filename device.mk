@@ -143,10 +143,6 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
 
-# Doze
-PRODUCT_PACKAGES += \
-    CustomDoze
-
 # Dirac
 PRODUCT_PACKAGES += \
     Dirac
