@@ -252,7 +252,6 @@
     <integer name="config_screen_off_delay">0</integer>
 
     <!-- Screen brightness when dozing. -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
     <bool name="config_setColorTransformAccelerated">true</bool>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
