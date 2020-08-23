@@ -252,7 +252,6 @@
     <integer name="config_screen_off_delay">0</integer>
 
     <!-- Screen brightness when dozing. -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
     <bool name="config_setColorTransformAccelerated">true</bool>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
@@ -386,7 +385,7 @@
          Empty is viewed as "all".  Only used on devices which
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
          format is UMTS|LTE|... -->
-    <string translatable="false" name="config_radio_access_family">GSM|WCDMA|LTE</string>
+    <string translatable="false" name="config_radio_access_family">GSM|GPRS|EDGE|UMTS|HSPA|HSPAP|LTE</string>
 
     <!-- The list of components which should be automatically disabled for a specific device. -->
     <string-array name="config_deviceDisabledComponents" translatable="false">
@@ -402,7 +401,6 @@
     <integer name="config_screenBrightnessDoze">10</integer>
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
     <bool name="config_dozeAfterScreenOff">true</bool>
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
     <integer name="config_defaultLiveDisplayMode">0</integer>
 
