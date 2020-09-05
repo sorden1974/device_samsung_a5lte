@@ -141,7 +141,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    SamsungDoze
+    XiaomiDoze
 
 # Dirac
 PRODUCT_PACKAGES += \

@@ -15,9 +15,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_a5lte.mk
+    $(LOCAL_DIR)/havoc_a5lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_a5lte-user \
-    bliss_a5lte-userdebug \
-    bliss_a5lte-eng
+    havoc_a5lte-user \
+    havoc_a5lte-userdebug \
+    havoc_a5lte-eng
