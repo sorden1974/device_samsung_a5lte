@@ -15,9 +15,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_a5lte.mk
+    $(LOCAL_DIR)/aosip_a5lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_a5lte-user \
-    lineage_a5lte-userdebug \
-    lineage_a5lte-eng
+    aosip_a5lte-user \
+    aosip_a5lte-userdebug \
+    aosip_a5lte-eng
