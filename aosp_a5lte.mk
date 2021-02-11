@@ -18,9 +18,15 @@ $(call inherit-product, device/samsung/a5lte/full_a5lte.mk)
 # Inherit System Prop for a5lte 
 $(call inherit-product, device/samsung/a5lte/system_prop.mk)
 
-# Inherit some common PE stuff
+# Inherit some common Pixel Experience stuff
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+TARGET_GAPPS_ARCH := arm
 TARGET_BOOT_ANIMATION_RES := 720
+
+# Pixel customization
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
